@@ -122,10 +122,10 @@ const HowItWorks = () => {
                         Start exploring our collection of unique properties today!
                     </p>
                     <Link
-                        to="/search"
+                        to="/"
                         className="inline-block bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white font-semibold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
                     >
-                        Browse Properties
+                        Browse Home
                     </Link>
                 </div>
             </div>

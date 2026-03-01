@@ -45,12 +45,6 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/search" className="text-gray-400 hover:text-rose-400 transition-colors flex items-center group">
-                                    <span className="w-0 group-hover:w-2 h-0.5 bg-rose-400 mr-0 group-hover:mr-2 transition-all"></span>
-                                    Browse Properties
-                                </Link>
-                            </li>
-                            <li>
                                 <Link to="/about" className="text-gray-400 hover:text-rose-400 transition-colors flex items-center group">
                                     <span className="w-0 group-hover:w-2 h-0.5 bg-rose-400 mr-0 group-hover:mr-2 transition-all"></span>
                                     About Us

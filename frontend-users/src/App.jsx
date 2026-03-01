@@ -12,7 +12,6 @@ import Profile from './pages/Profile';
 import BookingConfirmation from './pages/BookingConfirmation';
 import Checkout from './pages/Checkout';
 import BookingDetails from './pages/BookingDetails';
-import SearchPage from './pages/SearchPage';
 import WriteReview from './pages/WriteReview';
 import Notifications from './pages/Notifications';
 import ForgotPassword from './pages/ForgotPassword';
@@ -53,7 +52,6 @@ const App = () => {
             <ToastContainer position="top-center" autoClose={3000} />
             <Routes>
               <Route path="/" element={<Layout><Home /></Layout>} />
-              <Route path="/search" element={<Layout><SearchPage /></Layout>} />
               <Route path="/farmhouses/:id" element={<Layout><FarmhouseDetails /></Layout>} />
               <Route path="/trips" element={<Layout><Trips /></Layout>} />
               <Route path="/trips/:id" element={<Layout><BookingDetails /></Layout>} />

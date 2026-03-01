@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import { useAuth } from '../context/AuthContext';
 
 const SystemSettings = () => {
-    const { user, login } = useAuth(); // Assuming login updates context, or maybe we don't update context
+    const { admin, updateAdmin } = useAuth();
     const [activeTab, setActiveTab] = useState('system');
 
     // System Settings State
@@ -42,10 +42,10 @@ const SystemSettings = () => {
     }, []);
 
     useEffect(() => {
-        if (user) {
-            setProfile({ name: user.name, email: user.email });
+        if (admin) {
+            setProfile({ name: admin.name, email: admin.email });
         }
-    }, [user]);
+    }, [admin]);
 
     const loadSettings = async () => {
         try {
@@ -92,8 +92,8 @@ const SystemSettings = () => {
                 email: profile.email
             }, config);
 
+            updateAdmin(res.data);
             toast.success('Profile updated successfully');
-            // Update context/local storage if needed? Admin usually refreshes on reload
         } catch (error) {
             console.error(error);
             toast.error('Failed to update profile');

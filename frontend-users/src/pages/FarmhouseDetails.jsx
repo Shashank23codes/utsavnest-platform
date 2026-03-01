@@ -12,7 +12,7 @@ import StarRating from '../components/StarRating';
 const FarmhouseDetails = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { user, login } = useAuth();
+    const { user, login, logout } = useAuth();
     const [farmhouse, setFarmhouse] = useState(null);
     const [loading, setLoading] = useState(true);
     const [startDate, setStartDate] = useState(null);
@@ -310,7 +310,13 @@ const FarmhouseDetails = () => {
 
         } catch (error) {
             console.error(error);
-            toast.error(error.response?.data?.message || 'Booking initiation failed. Please try again.');
+            if (error.response?.status === 401) {
+                if (logout) logout();
+                toast.error('Please login to book a farmhouse');
+                navigate('/login', { state: { returnUrl: `/farmhouses/${id}` } });
+            } else {
+                toast.error(error.response?.data?.message || 'Booking initiation failed. Please try again.');
+            }
             setBookingLoading(false);
         }
     };

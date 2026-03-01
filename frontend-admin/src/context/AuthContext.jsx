@@ -51,11 +51,19 @@ export const AuthProvider = ({ children }) => {
         setAdmin(null);
     };
 
+    const updateAdmin = (adminData) => {
+        setAdmin(adminData);
+        if (adminData.token) {
+            localStorage.setItem('adminToken', adminData.token);
+        }
+    };
+
     const value = {
         admin,
         loading,
         login,
         logout,
+        updateAdmin,
         isAuthenticated: !!admin,
         token: localStorage.getItem('adminToken')
     };
