@@ -27,6 +27,18 @@ import CalendarView from './pages/CalendarView';
 import DashboardLayout from './components/DashboardLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 
+import About from './pages/About';
+import Careers from './pages/Careers';
+import Press from './pages/Press';
+import Blog from './pages/Blog';
+import HelpCenter from './pages/HelpCenter';
+import SafetyInformation from './pages/SafetyInformation';
+import CancellationOptions from './pages/CancellationOptions';
+import ReportConcern from './pages/ReportConcern';
+import TermsOfService from './pages/TermsOfService';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
+
 import { AuthProvider } from './context/AuthContext';
 import { NotificationProvider } from './context/NotificationContext';
 import NotificationPermissionModal from './components/NotificationPermissionModal';
@@ -47,6 +59,17 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password/:token" element={<ResetPassword />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/safety-information" element={<SafetyInformation />} />
+              <Route path="/cancellation-options" element={<CancellationOptions />} />
+              <Route path="/report-concern" element={<ReportConcern />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
 
               <Route path="/dashboard" element={
                 <ProtectedRoute>

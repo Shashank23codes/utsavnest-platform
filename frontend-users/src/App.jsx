@@ -24,6 +24,15 @@ import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
 import FAQ from './pages/FAQ';
 import HelpCenter from './pages/HelpCenter';
+import HostGuide from './pages/HostGuide';
+import HostResources from './pages/HostResources';
+import SafetyTips from './pages/SafetyTips';
+import CancellationPolicy from './pages/CancellationPolicy';
+import TrustSafety from './pages/TrustSafety';
+import RefundPolicy from './pages/RefundPolicy';
+import ReportIssue from './pages/ReportIssue';
+import CookiePolicy from './pages/CookiePolicy';
+import Sitemap from './pages/Sitemap';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -74,6 +83,15 @@ const App = () => {
               <Route path="/how-it-works" element={<Layout><HowItWorks /></Layout>} />
               <Route path="/faq" element={<Layout><FAQ /></Layout>} />
               <Route path="/help" element={<Layout><HelpCenter /></Layout>} />
+              <Route path="/host-guide" element={<Layout><HostGuide /></Layout>} />
+              <Route path="/host-resources" element={<Layout><HostResources /></Layout>} />
+              <Route path="/safety-tips" element={<Layout><SafetyTips /></Layout>} />
+              <Route path="/cancellation-policy" element={<Layout><CancellationPolicy /></Layout>} />
+              <Route path="/trust-safety" element={<Layout><TrustSafety /></Layout>} />
+              <Route path="/refund-policy" element={<Layout><RefundPolicy /></Layout>} />
+              <Route path="/report-issue" element={<Layout><ReportIssue /></Layout>} />
+              <Route path="/cookie-policy" element={<Layout><CookiePolicy /></Layout>} />
+              <Route path="/sitemap" element={<Layout><Sitemap /></Layout>} />
             </Routes>
           </BrowserRouter>
         </NotificationProvider>

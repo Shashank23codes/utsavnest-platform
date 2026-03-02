@@ -388,27 +388,27 @@ const LandingPage = () => {
                         <div>
                             <h3 className="text-lg font-bold mb-4">Company</h3>
                             <ul className="space-y-2 text-gray-400 text-sm">
-                                <li><a href="#" className="hover:text-white">About Us</a></li>
-                                <li><a href="#" className="hover:text-white">Careers</a></li>
-                                <li><a href="#" className="hover:text-white">Press</a></li>
-                                <li><a href="#" className="hover:text-white">Blog</a></li>
+                                <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+                                <li><Link to="/careers" className="hover:text-white">Careers</Link></li>
+                                <li><Link to="/press" className="hover:text-white">Press</Link></li>
+                                <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
                             </ul>
                         </div>
                         <div>
                             <h3 className="text-lg font-bold mb-4">Support</h3>
                             <ul className="space-y-2 text-gray-400 text-sm">
-                                <li><a href="#" className="hover:text-white">Help Center</a></li>
-                                <li><a href="#" className="hover:text-white">Safety Information</a></li>
-                                <li><a href="#" className="hover:text-white">Cancellation Options</a></li>
-                                <li><a href="#" className="hover:text-white">Report a Concern</a></li>
+                                <li><Link to="/help" className="hover:text-white">Help Center</Link></li>
+                                <li><Link to="/safety-information" className="hover:text-white">Safety Information</Link></li>
+                                <li><Link to="/cancellation-options" className="hover:text-white">Cancellation Options</Link></li>
+                                <li><Link to="/report-concern" className="hover:text-white">Report a Concern</Link></li>
                             </ul>
                         </div>
                         <div>
                             <h3 className="text-lg font-bold mb-4">Legal</h3>
                             <ul className="space-y-2 text-gray-400 text-sm">
-                                <li><a href="#" className="hover:text-white">Terms of Service</a></li>
-                                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-                                <li><a href="#" className="hover:text-white">Cookie Policy</a></li>
+                                <li><Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link></li>
+                                <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
+                                <li><Link to="/cookie-policy" className="hover:text-white">Cookie Policy</Link></li>
                             </ul>
                         </div>
                     </div>
