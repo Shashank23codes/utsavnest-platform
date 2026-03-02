@@ -43,6 +43,20 @@ import { AuthProvider } from './context/AuthContext';
 import { NotificationProvider } from './context/NotificationContext';
 import NotificationPermissionModal from './components/NotificationPermissionModal';
 import ScrollToTop from './components/ScrollToTop';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+const Layout = ({ children }) => {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 const App = () => {
   return (
@@ -54,22 +68,22 @@ const App = () => {
             <NotificationPermissionModal />
             <ToastContainer position="top-right" autoClose={3000} />
             <Routes>
-              <Route path="/" element={<LandingPage />} />
+              <Route path="/" element={<Layout><LandingPage /></Layout>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password/:token" element={<ResetPassword />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/press" element={<Press />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/help" element={<HelpCenter />} />
-              <Route path="/safety-information" element={<SafetyInformation />} />
-              <Route path="/cancellation-options" element={<CancellationOptions />} />
-              <Route path="/report-concern" element={<ReportConcern />} />
-              <Route path="/terms-of-service" element={<TermsOfService />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/cookie-policy" element={<CookiePolicy />} />
+              <Route path="/about" element={<Layout><About /></Layout>} />
+              <Route path="/careers" element={<Layout><Careers /></Layout>} />
+              <Route path="/press" element={<Layout><Press /></Layout>} />
+              <Route path="/blog" element={<Layout><Blog /></Layout>} />
+              <Route path="/help" element={<Layout><HelpCenter /></Layout>} />
+              <Route path="/safety-information" element={<Layout><SafetyInformation /></Layout>} />
+              <Route path="/cancellation-options" element={<Layout><CancellationOptions /></Layout>} />
+              <Route path="/report-concern" element={<Layout><ReportConcern /></Layout>} />
+              <Route path="/terms-of-service" element={<Layout><TermsOfService /></Layout>} />
+              <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
+              <Route path="/cookie-policy" element={<Layout><CookiePolicy /></Layout>} />
 
               <Route path="/dashboard" element={
                 <ProtectedRoute>

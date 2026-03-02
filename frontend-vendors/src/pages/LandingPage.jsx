@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 
 const LandingPage = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openFaq, setOpenFaq] = useState(null);
 
     const toggleFaq = (index) => {
@@ -46,55 +45,6 @@ const LandingPage = () => {
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
-            {/* Navigation */}
-            <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between h-20 items-center">
-                        <div className="flex items-center">
-                            <div className="bg-emerald-600 p-2 rounded-lg mr-2">
-                                <Building2 className="h-6 w-6 text-white" />
-                            </div>
-                            <span className="text-2xl font-bold tracking-tight text-gray-900">UtsavNest <span className="text-emerald-600">Partner</span></span>
-                        </div>
-
-                        {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center space-x-8">
-                            <a href="#features" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Features</a>
-                            <a href="#how-it-works" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">How it Works</a>
-                            <a href="#testimonials" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Stories</a>
-                            <div className="flex items-center space-x-4 ml-4">
-                                <Link to="/login" className="text-gray-900 hover:text-emerald-600 font-bold transition-colors">Log in</Link>
-                                <Link to="/register" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-lg hover:shadow-emerald-200 transform hover:-translate-y-0.5">
-                                    List Your Property
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Mobile Menu Button */}
-                        <div className="md:hidden flex items-center">
-                            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-600 hover:text-gray-900 p-2">
-                                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Mobile Menu */}
-                {isMobileMenuOpen && (
-                    <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
-                        <div className="px-4 pt-2 pb-6 space-y-2">
-                            <a href="#features" className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
-                            <a href="#how-it-works" className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50" onClick={() => setIsMobileMenuOpen(false)}>How it Works</a>
-                            <a href="#testimonials" className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50" onClick={() => setIsMobileMenuOpen(false)}>Stories</a>
-                            <div className="pt-4 flex flex-col space-y-3 px-3">
-                                <Link to="/login" className="w-full text-center px-4 py-3 border border-gray-300 rounded-lg text-gray-700 font-bold hover:bg-gray-50">Log in</Link>
-                                <Link to="/register" className="w-full text-center px-4 py-3 bg-emerald-600 rounded-lg text-white font-bold hover:bg-emerald-700 shadow-md">List Your Property</Link>
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </nav>
-
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -371,55 +321,6 @@ const LandingPage = () => {
                     <p className="mt-6 text-sm text-emerald-300">No setup fees • Cancel anytime</p>
                 </div>
             </div>
-
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white pt-16 pb-8">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                        <div className="col-span-1 md:col-span-1">
-                            <div className="flex items-center mb-4">
-                                <Building2 className="h-8 w-8 text-emerald-500 mr-2" />
-                                <span className="text-xl font-bold">UtsavNest</span>
-                            </div>
-                            <p className="text-gray-400 text-sm">
-                                Empowering property owners to share their unique spaces with the world.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold mb-4">Company</h3>
-                            <ul className="space-y-2 text-gray-400 text-sm">
-                                <li><Link to="/about" className="hover:text-white">About Us</Link></li>
-                                <li><Link to="/careers" className="hover:text-white">Careers</Link></li>
-                                <li><Link to="/press" className="hover:text-white">Press</Link></li>
-                                <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold mb-4">Support</h3>
-                            <ul className="space-y-2 text-gray-400 text-sm">
-                                <li><Link to="/help" className="hover:text-white">Help Center</Link></li>
-                                <li><Link to="/safety-information" className="hover:text-white">Safety Information</Link></li>
-                                <li><Link to="/cancellation-options" className="hover:text-white">Cancellation Options</Link></li>
-                                <li><Link to="/report-concern" className="hover:text-white">Report a Concern</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-bold mb-4">Legal</h3>
-                            <ul className="space-y-2 text-gray-400 text-sm">
-                                <li><Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link></li>
-                                <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
-                                <li><Link to="/cookie-policy" className="hover:text-white">Cookie Policy</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-gray-500 text-sm">© 2024 UtsavNest. All rights reserved.</p>
-                        <div className="flex space-x-6 mt-4 md:mt-0">
-                            {/* Social Icons would go here */}
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 };
