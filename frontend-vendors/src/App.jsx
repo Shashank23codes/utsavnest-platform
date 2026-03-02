@@ -30,6 +30,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
 import { NotificationProvider } from './context/NotificationContext';
 import NotificationPermissionModal from './components/NotificationPermissionModal';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
       <AuthProvider>
         <NotificationProvider>
           <BrowserRouter>
+            <ScrollToTop />
             <NotificationPermissionModal />
             <ToastContainer position="top-right" autoClose={3000} />
             <Routes>

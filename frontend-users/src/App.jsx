@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -48,6 +49,7 @@ const App = () => {
       <AuthProvider>
         <NotificationProvider>
           <BrowserRouter>
+            <ScrollToTop />
             <NotificationPermissionModal />
             <ToastContainer position="top-center" autoClose={3000} />
             <Routes>

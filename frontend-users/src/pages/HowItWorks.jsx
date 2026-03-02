@@ -7,7 +7,7 @@ const HowItWorks = () => {
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
             <div className="bg-gradient-to-br from-rose-50 to-pink-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
                     <Link to="/" className="inline-flex items-center text-gray-600 hover:text-rose-600 mb-8 transition-colors">
                         <ArrowLeft className="h-5 w-5 mr-2" />
                         Back to Home

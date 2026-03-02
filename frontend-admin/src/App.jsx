@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { NotificationProvider } from './context/NotificationContext';
 import NotificationPermissionModal from './components/NotificationPermissionModal';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Login from './pages/Login';
@@ -73,6 +74,7 @@ function App() {
     <AuthProvider>
       <NotificationProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <NotificationPermissionModal />
           <AppRoutes />
           <ToastContainer position="top-right" autoClose={3000} />
