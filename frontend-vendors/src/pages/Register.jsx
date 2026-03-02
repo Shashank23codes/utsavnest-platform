@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Mail, Lock, Phone, ArrowRight, Loader2, Building2, Eye, EyeOff } from 'lucide-react';
+import { User, Mail, Lock, Phone, ArrowRight, ArrowLeft, Loader2, Building2, Eye, EyeOff } from 'lucide-react';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -104,8 +104,12 @@ const Register = () => {
             </div>
 
             {/* Right Side: Form */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-14 bg-white overflow-y-auto">
-                <div className="w-full max-w-[460px] py-8">
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-14 bg-white overflow-y-auto relative">
+                <Link to="/" className="absolute top-6 left-6 md:top-8 md:left-12 flex items-center gap-2 text-gray-500 hover:text-emerald-700 transition-colors font-medium text-sm bg-gray-50 hover:bg-emerald-50 px-4 py-2 rounded-full shadow-sm">
+                    <ArrowLeft className="h-4 w-4" />
+                    Back to Home
+                </Link>
+                <div className="w-full max-w-[460px] py-8 mt-6 lg:mt-0">
                     <div className="space-y-2 mb-8">
                         <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">Create Account</h2>
                         <p className="text-gray-500 font-medium">Get started with your free partner account.</p>

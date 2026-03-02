@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock, Loader2, Building2, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import { Mail, Lock, Loader2, Building2, Eye, EyeOff, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -106,8 +106,12 @@ const Login = () => {
             </div>
 
             {/* Right Side: Form */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-16 bg-white overflow-y-auto">
-                <div className="w-full max-w-[420px] py-10">
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 lg:p-16 bg-white overflow-y-auto relative">
+                <Link to="/" className="absolute top-6 left-6 md:top-8 md:left-12 flex items-center gap-2 text-gray-500 hover:text-emerald-700 transition-colors font-medium text-sm bg-gray-50 hover:bg-emerald-50 px-4 py-2 rounded-full shadow-sm">
+                    <ArrowLeft className="h-4 w-4" />
+                    Back to Home
+                </Link>
+                <div className="w-full max-w-[420px] py-10 mt-6 lg:mt-0">
                     <div className="space-y-2 mb-10">
                         <h2 className="text-4xl font-extrabold text-[#1a1a1a] tracking-tight">Sign In</h2>
                         <p className="text-gray-500 font-medium">Please enter your partner credentials to continue.</p>
